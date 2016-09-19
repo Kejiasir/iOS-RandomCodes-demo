@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 #import "YYRandomCodes.h"
+#import "UIView+Extension.h"
 
 #define WIDTH [[UIScreen mainScreen] bounds].size.width
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 
 /** 纯代码创建控件 **/
 @property (nonatomic, strong) UILabel *label;
@@ -42,7 +43,9 @@
     
     [self.view addSubview:self.textField = ({
         self.textField = [[UITextField alloc] init];
+        self.textField.delegate = self;
         self.textField.placeholder = @"请输入验证码";
+        [self.textField setClearButtonMode:UITextFieldViewModeWhileEditing];
         self.textField.frame = CGRectMake(CGRectGetMaxX(self.label.frame), 100, WIDTH-30-60-80, 35);
         self.textField;
     })];
@@ -67,7 +70,8 @@
     
     [self.view addSubview:self.submitBtn = ({
         self.submitBtn = [[UIButton alloc] init];
-        [self.submitBtn setBackgroundColor:[UIColor greenColor]];
+        [self.submitBtn setEnabled:NO];
+        [self.submitBtn setBackgroundColor:[self rgbWithAlpha:.6f]];
         [self.submitBtn setFrame:CGRectMake(50, CGRectGetMaxY(self.lineView.frame)+30, WIDTH-100, 40)];
         [self.submitBtn setTitle:@"提 交" forState:UIControlStateNormal];
         [self.submitBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
@@ -80,10 +84,28 @@
 
 - (void)submitBtnClick:(UIButton *)submitBtn {
     if (![self.textField.text isEqualToString:self.inputCodeStr]) {
-        NSLog(@"验证码错误, 请重新输入");
+        [self.view showMessage:@"验证码错误, 请重新输入" duration:2.5f];
     } else {
-        NSLog(@"验证码正确");
+        [self.view showMessage:@"验证码正确" duration:2.5f];
     }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *replaceStr = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    if (replaceStr.length > 0) {
+        [self.submitBtn setEnabled:YES];
+        [self.submitBtn setBackgroundColor:[self rgbWithAlpha:1.f]];
+    } else if (replaceStr.length == 0) {
+        [self.submitBtn setEnabled:NO];
+        [self.submitBtn setBackgroundColor:[self rgbWithAlpha:.6f]];
+    }
+    return YES;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
+    [self.submitBtn setEnabled:NO];
+    [self.submitBtn setBackgroundColor:[self rgbWithAlpha:.6f]];
+    return YES;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -94,6 +116,10 @@
 - (void)setupView {
     [self.IBRandomCodes.layer setCornerRadius:3.0f];
     [self.IBRandomCodes.layer setMasksToBounds:YES];
+}
+
+- (UIColor *)rgbWithAlpha:(CGFloat)alpha {
+    return [UIColor colorWithRed:29/255.0f green:130/255.0f blue:250/255.0f alpha:alpha];
 }
 
 - (void)didReceiveMemoryWarning {

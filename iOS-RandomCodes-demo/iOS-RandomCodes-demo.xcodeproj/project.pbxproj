@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A238F9B21D8FC0BD00B133DC /* RandomCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = A238F9B11D8FC0BD00B133DC /* RandomCodes.plist */; };
+		A238F9B51D8FE75400B133DC /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A238F9B41D8FE75400B133DC /* UIView+Extension.m */; };
 		A2A4D4F31D8EE5140058DAB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A4D4F21D8EE5140058DAB9 /* main.m */; };
 		A2A4D4F61D8EE5140058DAB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A4D4F51D8EE5140058DAB9 /* AppDelegate.m */; };
 		A2A4D4F91D8EE5140058DAB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A4D4F81D8EE5140058DAB9 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		A238F9B11D8FC0BD00B133DC /* RandomCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RandomCodes.plist; sourceTree = "<group>"; };
+		A238F9B31D8FE75400B133DC /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		A238F9B41D8FE75400B133DC /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		A2A4D4EE1D8EE5140058DAB9 /* iOS-RandomCodes-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-RandomCodes-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A4D4F21D8EE5140058DAB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2A4D4F41D8EE5140058DAB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				A2A4D4F51D8EE5140058DAB9 /* AppDelegate.m */,
 				A2A4D4F71D8EE5140058DAB9 /* ViewController.h */,
 				A2A4D4F81D8EE5140058DAB9 /* ViewController.m */,
+				A238F9B31D8FE75400B133DC /* UIView+Extension.h */,
+				A238F9B41D8FE75400B133DC /* UIView+Extension.m */,
 				A2A4D4FA1D8EE5140058DAB9 /* Main.storyboard */,
 				A2A4D4FD1D8EE5140058DAB9 /* Assets.xcassets */,
 				A2A4D4FF1D8EE5140058DAB9 /* LaunchScreen.storyboard */,
@@ -166,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A238F9B51D8FE75400B133DC /* UIView+Extension.m in Sources */,
 				A2A4D4F91D8EE5140058DAB9 /* ViewController.m in Sources */,
 				A2A4D4F61D8EE5140058DAB9 /* AppDelegate.m in Sources */,
 				A2A4D4F31D8EE5140058DAB9 /* main.m in Sources */,

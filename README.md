@@ -27,7 +27,7 @@
 
 
 ### Screenshot
-<img src="001.png?v=3&s=100" alt="GitHub" title="demo预览效果" width="260" height="480"/>
+<img src="001.gif?v=3&s=100" alt="GitHub" title="demo预览效果" width="260" height="480"/>
 
 
 ## License
