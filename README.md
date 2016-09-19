@@ -24,6 +24,12 @@
     })];
 ```
 ### 具体的可以参照demo, 支持 `纯代码 / storyboard / xib` 创建方式
+### 注意: 使用 `storyboard/xib` 创建需要自行设置圆角(如果需要的话)
+```objc
+//  示例, 设置圆角
+[self.IBRandomCodes.layer setCornerRadius:3.0f];
+[self.IBRandomCodes.layer setMasksToBounds:YES];
+```
 
 
 ### Screenshot
