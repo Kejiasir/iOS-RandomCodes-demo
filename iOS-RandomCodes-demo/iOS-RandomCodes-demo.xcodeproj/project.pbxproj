@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A238F9B21D8FC0BD00B133DC /* RandomCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = A238F9B11D8FC0BD00B133DC /* RandomCodes.plist */; };
 		A2A4D4F31D8EE5140058DAB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A4D4F21D8EE5140058DAB9 /* main.m */; };
 		A2A4D4F61D8EE5140058DAB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A4D4F51D8EE5140058DAB9 /* AppDelegate.m */; };
 		A2A4D4F91D8EE5140058DAB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A4D4F81D8EE5140058DAB9 /* ViewController.m */; };
 		A2A4D4FC1D8EE5140058DAB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A4D4FA1D8EE5140058DAB9 /* Main.storyboard */; };
 		A2A4D4FE1D8EE5140058DAB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A4D4FD1D8EE5140058DAB9 /* Assets.xcassets */; };
 		A2A4D5011D8EE5140058DAB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A4D4FF1D8EE5140058DAB9 /* LaunchScreen.storyboard */; };
+		A2A4D50B1D8EE9A50058DAB9 /* YYRandomCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A4D50A1D8EE9A50058DAB9 /* YYRandomCodes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A238F9B11D8FC0BD00B133DC /* RandomCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RandomCodes.plist; sourceTree = "<group>"; };
 		A2A4D4EE1D8EE5140058DAB9 /* iOS-RandomCodes-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-RandomCodes-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A4D4F21D8EE5140058DAB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2A4D4F41D8EE5140058DAB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,8 @@
 		A2A4D4FD1D8EE5140058DAB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2A4D5001D8EE5140058DAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2A4D5021D8EE5140058DAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A4D5091D8EE9A50058DAB9 /* YYRandomCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRandomCodes.h; sourceTree = "<group>"; };
+		A2A4D50A1D8EE9A50058DAB9 /* YYRandomCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRandomCodes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 		A2A4D4F01D8EE5140058DAB9 /* iOS-RandomCodes-demo */ = {
 			isa = PBXGroup;
 			children = (
+				A2A4D5081D8EE98B0058DAB9 /* YYRandomCodes */,
 				A2A4D4F41D8EE5140058DAB9 /* AppDelegate.h */,
 				A2A4D4F51D8EE5140058DAB9 /* AppDelegate.m */,
 				A2A4D4F71D8EE5140058DAB9 /* ViewController.h */,
@@ -77,6 +83,16 @@
 				A2A4D4F21D8EE5140058DAB9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2A4D5081D8EE98B0058DAB9 /* YYRandomCodes */ = {
+			isa = PBXGroup;
+			children = (
+				A238F9B11D8FC0BD00B133DC /* RandomCodes.plist */,
+				A2A4D5091D8EE9A50058DAB9 /* YYRandomCodes.h */,
+				A2A4D50A1D8EE9A50058DAB9 /* YYRandomCodes.m */,
+			);
+			path = YYRandomCodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +154,7 @@
 			files = (
 				A2A4D5011D8EE5140058DAB9 /* LaunchScreen.storyboard in Resources */,
 				A2A4D4FE1D8EE5140058DAB9 /* Assets.xcassets in Resources */,
+				A238F9B21D8FC0BD00B133DC /* RandomCodes.plist in Resources */,
 				A2A4D4FC1D8EE5140058DAB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +169,7 @@
 				A2A4D4F91D8EE5140058DAB9 /* ViewController.m in Sources */,
 				A2A4D4F61D8EE5140058DAB9 /* AppDelegate.m in Sources */,
 				A2A4D4F31D8EE5140058DAB9 /* main.m in Sources */,
+				A2A4D50B1D8EE9A50058DAB9 /* YYRandomCodes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +318,7 @@
 				A2A4D5071D8EE5140058DAB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
